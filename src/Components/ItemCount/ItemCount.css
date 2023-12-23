@@ -1,0 +1,60 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin: 20px;
+  }
+  
+  .buttons-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .decrement {
+    background-color: red; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .increment {
+    background-color: green; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .quantity {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  
+  .addToCart {
+    padding: 10px;
+    font-size: 16px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .addToCart:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

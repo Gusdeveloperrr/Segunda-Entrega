@@ -1,0 +1,47 @@
+
+
+header {
+    background-color: #282c34; 
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1 {
+    margin: 0px; 
+  }
+  
+  img {
+    height: 10px;
+    
+     
+  }
+  
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+  
+    li {
+      margin-right: 80px; 
+    }
+  
+    a {
+      text-decoration: none;
+      color: white; 
+      font-weight: bold; 
+      font-size: 30px; 
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: #61dafb; 
+      }
+    }
+  }
+  
+ 
+  
