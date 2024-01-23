@@ -1,0 +1,40 @@
+.contador-container {
+  display: flex;
+  align-items: center;
+}
+
+.contador-btn {
+  padding: 10px;
+  font-size: 1.2em;
+  margin: 0 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contador-btn:hover {
+  background-color: #45a049;
+}
+
+.contador-value {
+  font-size: 1.5em;
+  margin: 0 10px;
+}
+
+.agregar-btn {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.agregar-btn:hover {
+  background-color: #45a049;
+}

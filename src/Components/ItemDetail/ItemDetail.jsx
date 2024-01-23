@@ -1,30 +1,41 @@
-
-import React from 'react';
-import ItemCount from '../ItemCount/ItemCount';
+import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import Contador from '../Contador/Contador';
+import { CarritoContext } from '../../context/CarritoContext';
 import './ItemDetail.css'; 
 
-const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
+const ItemDetail = ({ id, nombre, stock, precio, img }) => {
+  const [agregarCantidad, setAgregarCantidad] = useState(0);
+  const { agregarAlCarrito } = useContext(CarritoContext);
+
+  const manejadorCantidad = (cantidad) => {
+    setAgregarCantidad(cantidad);
+
+    const item = { id, nombre, precio };
+    agregarAlCarrito(item, cantidad);
+  };
+
   return (
-    <article className="item-detail-container">
-      <header>
-        <h2>{name}</h2>
-      </header>
-      <div className="image-container">
-        <img src={img} alt={name} />
+    <div className='item-detail-container'>
+      <header>{nombre}</header>
+      <div className='image-container'>
+        <img src={img} alt={nombre} />
       </div>
       <section>
-        <p>Categoria: {category}</p>
-        <p>Descripcion: {description}</p>
-        <p>Precio: ${price}</p>
-        <p>Stock Disponible: {stock}</p>
+        <p>Precio: {precio}</p>
+        <p>ID: {id}</p>
+       
       </section>
       <footer>
-        <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log('Cantidad sumada', quantity)} />
-        <a href={`/item/${id}`} className="more-info-link">
-          Más info
-        </a>
+        {agregarCantidad > 0 ? (
+          <Link to="/cart" className='more-info-link'>
+            Terminar Compra
+          </Link>
+        ) : (
+          <Contador inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />
+        )}
       </footer>
-    </article>
+    </div>
   );
 };
 

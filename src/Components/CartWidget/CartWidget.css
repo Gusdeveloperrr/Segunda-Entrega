@@ -1,4 +1,15 @@
-.imgCar{
-    width: 50px;
 
-}
+
+div {
+    position: relative;
+  }
+  
+  .carrito {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  
+    
+  

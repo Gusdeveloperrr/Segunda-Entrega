@@ -1,50 +1,44 @@
-
-
-article {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
+.cardProducto {
+  max-width: 300px;
+  margin: 20px auto; /* Añadido para centrar horizontalmente */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease;
 }
 
-header {
-  margin-bottom: 10px;
-}
-.ti{
-  
-  text-align: center;
-  margin: 0px;
-  padding:10px;
-  color: #fff;
+.cardProducto:hover {
+  transform: scale(1.05);
 }
 
-img {
+.cardProducto img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-.price-stock-container {
-  margin-top: 10px;
+.cardProducto h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
 }
 
-footer {
-  margin-top: 10px;
+.cardProducto p {
+  margin: 5px 0;
 }
 
-
-footer a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  border: 1px solid rgb(176, 130, 218);
-  padding: 10px 50px;
-  border-radius: 5px;
+.btn {
   display: inline-block;
-  background-color: blueviolet;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-footer a:hover {
-  background-color: rgb(204, 161, 245);
-  color: #fff;
+.btn:hover {
+  background-color: #45a049;
 }

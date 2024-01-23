@@ -1,9 +1,12 @@
-import React from 'react'
-import Item from '../Item/Item'
-const ItemList = ({products}) => {
+import Item from "../Item/Item";
+
+
+const ItemList = ({productos}) => {
   return (
-    <div>
-        {products.map(prod => <Item key={prod.id} {...prod}/>)}
+    <div className="contenedorProductos">
+        {
+            productos.map(producto => <Item key={producto.id} {...producto} />)
+        }
     </div>
   )
 }
